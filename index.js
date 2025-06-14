@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "https://book-planet-client.vercel.app/",
+    origin: "https://book-planet-client.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
