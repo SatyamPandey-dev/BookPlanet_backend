@@ -22,7 +22,7 @@ app.use(
   })
 );
 app.use(express.json());
-const port = process.env.e_port || 3000;
+const PORT = process.env.PORT;
 
 const connectWithRetry = async (retries = 5, delay = 2000) => {
   for (let i = 0; i < retries; i++) {
@@ -54,6 +54,6 @@ app.use("/api", geminiRoutes);
 
 app.use("/api", bookRouter);
 
-app.listen(port, () => {
-  console.log("Server is running on port : ", `${port}`);
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
 });
